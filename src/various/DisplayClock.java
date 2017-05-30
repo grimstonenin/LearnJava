@@ -1,4 +1,6 @@
- import javafx.application.Application;
+package various;
+
+import javafx.application.Application;
          import javafx.geometry.Pos;
          import javafx.stage.Stage;
          import javafx.scene.Scene;
@@ -22,7 +24,7 @@
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 250, 250);
-        primaryStage.setTitle("DisplayClock"); // Set the stage title
+        primaryStage.setTitle("various.DisplayClock"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
         }

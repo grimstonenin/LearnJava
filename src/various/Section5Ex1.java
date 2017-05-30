@@ -1,4 +1,4 @@
-/**
+package various; /**
  * (Count positive and negative numbers and compute the average of numbers) Write
  a program that reads an unspecified number of integers, determines how many
  positive and negative values have been read, and computes the total and average of

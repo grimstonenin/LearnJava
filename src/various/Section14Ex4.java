@@ -1,3 +1,5 @@
+package various;
+
 import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.geometry.Insets;

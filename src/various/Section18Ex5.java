@@ -1,4 +1,4 @@
-//(Print the digits in an integer reversely) Write a recursive method that displays
+package various;//(Print the digits in an integer reversely) Write a recursive method that displays
 //        an int value reversely on the console using the following header:
 //public static void reverseDisplay(int value)
 import java.util.Scanner;

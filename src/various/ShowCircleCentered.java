@@ -1,3 +1,5 @@
+package various;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -22,7 +24,7 @@ public void start(Stage primaryStage) {
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 200, 200);
-        primaryStage.setTitle("ShowCircleCentered"); // Set the stage title
+        primaryStage.setTitle("various.ShowCircleCentered"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
         }

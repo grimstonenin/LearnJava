@@ -1,4 +1,4 @@
-/**
+package various; /**
   (Occurrences of a specified character in a string) Write a recursive method that
  finds the number of occurrences of a specified letter in a string using the following
  method header:

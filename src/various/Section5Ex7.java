@@ -1,3 +1,5 @@
+package various;
+
 /**
  * (Financial application: compute future tuition) Suppose that the tuition for a university
  is $10,000 this year and increases 5% every year. In one year, the tuition

@@ -1,3 +1,5 @@
+package various;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,7 +10,7 @@ public class MyJavaFX extends Application{
     public void start(Stage primaryStage){
         Button btOK = new Button("Ok");
         Scene scene = new Scene(btOK,200,200);
-        primaryStage.setTitle("MyJavaFX");
+        primaryStage.setTitle("various.MyJavaFX");
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();

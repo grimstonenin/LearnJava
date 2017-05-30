@@ -1,4 +1,4 @@
-/**
+package various; /**
  (Print the characters in a string reversely) Write a recursive method that displays
  a string reversely on the console using the following header:
  public static void reverseDisplay(String value)

@@ -1,4 +1,4 @@
-/**
+package various; /**
  (Game: scissor, rock, paper) Write a program that plays the popular scissor-rockpaper
  game. (A scissor can cut a paper, a rock can knock a scissor, and a paper can
  wrap a rock.) The program randomly generates a number 0, 1, or 2 representing

@@ -1,3 +1,5 @@
+package various;
+
 import java.util.Scanner;
 
 public class Section4ex2 {
