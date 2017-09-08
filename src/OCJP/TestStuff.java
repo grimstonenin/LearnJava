@@ -1,6 +1,7 @@
 package OCJP;
 
 import java.time.*;
+import java.time.format.*;
 
 
 public class TestStuff {
@@ -26,6 +27,15 @@ public class TestStuff {
         Period monthly = Period.ofMonths(1);
 
         System.out.println(localDate.plus(anually).plus(monthly));
+
+        System.out.println("-------------------");
+        System.out.println();
+
+        DateTimeFormatter shortDateTime = DateTimeFormatter.BASIC_ISO_DATE;
+
+        System.out.println(shortDateTime.format(localDateTime));
+
+        System.out.println(localDateTime.format(shortDateTime));
 
     }
 
