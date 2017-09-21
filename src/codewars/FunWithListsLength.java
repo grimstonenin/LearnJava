@@ -1,21 +1,20 @@
 package codewars;
 
-class Node<T> {
-    public Object data;
-    public Node next;
-
-    Node(T data, Node next) {
-        this.data = data;
-        this.next = next;
-    }
-
-    Node(T data) {
-        this(data, null);
-    }
-}
-
-
 public class FunWithListsLength {
+
+    private static class Node<T> {
+        public Object data;
+        public Node next;
+
+        Node(T data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        Node(T data) {
+            this(data, null);
+        }
+    }
 
     static int length(Node head) {
 
@@ -61,7 +60,7 @@ public class FunWithListsLength {
 
         System.out.println(indexOf(head,2));
 
-        
+
 
     }
 }
