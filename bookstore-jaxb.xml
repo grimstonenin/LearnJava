@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <BookStore>
+        <name>Fraport Bookstore</name>
+        <location>Frankfurt Airport</location>
+        <booklist>
+            <book>
+                <booknumber>1</booknumber>
+                <bookname>Dune</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Chilton Books</bookpublisher>
+                <isbn>978-0441172719</isbn>
+                <releasedate/>
+                <bookpages>412.0</bookpages>
+            </book>
+            <book>
+                <booknumber>2</booknumber>
+                <bookname>Dune Messiah</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Putnam Publishing</bookpublisher>
+                <isbn>9780441172696</isbn>
+                <releasedate/>
+                <bookpages>256.0</bookpages>
+            </book>
+            <book>
+                <booknumber>3</booknumber>
+                <bookname>Children of Dune</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Putnam Publishing</bookpublisher>
+                <isbn>0-399-11697-4</isbn>
+                <releasedate/>
+                <bookpages>416.0</bookpages>
+            </book>
+        </booklist>
+    </BookStore>
+    <BookStore>
+        <name>Otopeni Bookstore</name>
+        <location>Otopeni Airport</location>
+        <booklist>
+            <book>
+                <booknumber>4</booknumber>
+                <bookname>God Emperor of Dune</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Putnam Publishing</bookpublisher>
+                <isbn>0-575-02976-5</isbn>
+                <releasedate/>
+                <bookpages>412.0</bookpages>
+            </book>
+            <book>
+                <booknumber>5</booknumber>
+                <bookname>Heretics of Dune</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Putnam Publishing</bookpublisher>
+                <isbn>0-399-12898-0</isbn>
+                <releasedate/>
+                <bookpages>256.0</bookpages>
+            </book>
+            <book>
+                <booknumber>6</booknumber>
+                <bookname>Chapterhouse: Dune</bookname>
+                <bookauthor>Frank Herbert</bookauthor>
+                <bookpublisher>Putnam Publishing</bookpublisher>
+                <isbn>0-399-13027-6</isbn>
+                <releasedate/>
+                <bookpages>464.0</bookpages>
+            </book>
+        </booklist>
+    </BookStore>
+</root>
