@@ -3,6 +3,7 @@ package JAXB.SerializeAndDeserialize;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
@@ -138,6 +139,27 @@ public class BookstoreMain {
         m.marshal(s, new File(BOOKSTORE_XML));
 
 
+        File input = new File(BOOKSTORE_XML);
 
+        JAXBContext unmarshallContext = JAXBContext.newInstance(Stores.class);
+        Unmarshaller unmarshaller = unmarshallContext.createUnmarshaller();
+
+        Stores stores = (Stores)unmarshaller.unmarshal(input);
+
+        for(Bookstore b: stores.getStores()){
+            System.out.println(b.getName());
+            System.out.println(b.getLocation());
+            for(Book book: b.getBookList()){
+                System.out.println(book.getName());
+                System.out.println(book.getAuthor());
+                System.out.println(book.getReleaseDate());
+                System.out.println(book.getISBN());
+                System.out.println(book.getPublisher());
+                System.out.println(book.getTotalPages());
+                System.out.println(book.getBookNumber());
+            }
+        }
+
+        System.out.println(stores);
     }
 }

@@ -3,6 +3,7 @@ package JAXB.SerializeAndDeserialize;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.*;
 
 @XmlRootElement(name="bookstore")
@@ -72,11 +73,13 @@ public class Book {
         this.totalPages = d;
     }
 
-    @XmlElement(name="releasedate")
+    @XmlElement(name="releaseDate")
     public LocalDate getReleaseDate(){
         return this.releaseDate;
     }
 
+
+    @XmlJavaTypeAdapter(DateTypeAdapter.class)
     public void setReleaseDate(LocalDate d){
         this.releaseDate = d;
     }
