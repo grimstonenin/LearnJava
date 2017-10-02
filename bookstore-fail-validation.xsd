@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Bookstore" type="bookstore"/>
+
+  <xs:element name="bookstore" type="book"/>
+
+  <xs:element name="root" type="stores"/>
+
+  <xs:complexType name="stores">
+    <xs:sequence>
+      <xs:element name="BookStore" type="bookstore" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bookstore">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="location" type="xs:string" minOccurs="0"/>
+      <xs:element name="booklist" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="book" type="book" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="book">
+    <xs:sequence>
+      <xs:element name="booknumber" type="xs:int"/>
+      <xs:element name="bookname" type="xs:string" minOccurs="1"/>
+      <xs:element name="bookauthor" type="xs:string" minOccurs="0"/>
+      <xs:element name="bookpublisher" type="xs:string" minOccurs="0"/>
+      <xs:element name="isbn" type="xs:string" minOccurs="0"/>
+      <xs:element name="releaseDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="bookpages" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

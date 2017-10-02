@@ -1,12 +1,12 @@
 package JAXB.SerializeAndDeserialize;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.transform.Result;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -119,7 +119,7 @@ public class BookstoreMain {
 
     private static final String BOOKSTORE_XML = "./bookstore-jaxb.xml";
 
-    public static void main(String[] args) throws JAXBException {
+    public static void main(String[] args) throws JAXBException, IOException {
 
 
         Stores s = new Stores();
@@ -127,6 +127,9 @@ public class BookstoreMain {
         s.setStores();
 
         JAXBContext context = JAXBContext.newInstance(Stores.class);
+
+        //marshall stuff into file
+
         Marshaller m = context.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
@@ -138,6 +141,8 @@ public class BookstoreMain {
         // Write to File
         m.marshal(s, new File(BOOKSTORE_XML));
 
+
+        //unmarshall
 
         File input = new File(BOOKSTORE_XML);
 
@@ -160,6 +165,20 @@ public class BookstoreMain {
             }
         }
 
-        System.out.println(stores);
+//create schema from xml
+        SchemaOutputResolver outputResolver = new SchemaOutputResolver() {
+            @Override
+            public Result createOutput(String namespaceUri, String suggestedFileName) throws IOException {
+                suggestedFileName = "bookstore.xsd";
+                File file = new File(suggestedFileName);
+                StreamResult result = new StreamResult(file);
+                result.setSystemId(file.toURI().toURL().toString());
+                return result;
+            }
+        };
+
+        context.generateSchema(outputResolver);
+
+
     }
 }

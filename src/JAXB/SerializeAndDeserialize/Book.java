@@ -19,7 +19,7 @@ public class Book {
     private int bookNumber;
     private double totalPages;
 
-    @XmlElement(name="bookname")
+    @XmlElement(name="bookname",nillable = false)
     public String getName(){
         return this.name;
     }
