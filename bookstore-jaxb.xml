@@ -10,7 +10,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Chilton Books</bookpublisher>
                 <isbn>978-0441172719</isbn>
-                <releasedate/>
+                <releaseDate>1965-08-01</releaseDate>
                 <bookpages>412.0</bookpages>
             </book>
             <book>
@@ -19,7 +19,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Putnam Publishing</bookpublisher>
                 <isbn>9780441172696</isbn>
-                <releasedate/>
+                <releaseDate>1969-08-01</releaseDate>
                 <bookpages>256.0</bookpages>
             </book>
             <book>
@@ -28,7 +28,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Putnam Publishing</bookpublisher>
                 <isbn>0-399-11697-4</isbn>
-                <releasedate/>
+                <releaseDate>1976-08-01</releaseDate>
                 <bookpages>416.0</bookpages>
             </book>
         </booklist>
@@ -43,7 +43,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Putnam Publishing</bookpublisher>
                 <isbn>0-575-02976-5</isbn>
-                <releasedate/>
+                <releaseDate>1981-08-01</releaseDate>
                 <bookpages>412.0</bookpages>
             </book>
             <book>
@@ -52,7 +52,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Putnam Publishing</bookpublisher>
                 <isbn>0-399-12898-0</isbn>
-                <releasedate/>
+                <releaseDate>1984-08-01</releaseDate>
                 <bookpages>256.0</bookpages>
             </book>
             <book>
@@ -61,7 +61,7 @@
                 <bookauthor>Frank Herbert</bookauthor>
                 <bookpublisher>Putnam Publishing</bookpublisher>
                 <isbn>0-399-13027-6</isbn>
-                <releasedate/>
+                <releaseDate>1985-08-01</releaseDate>
                 <bookpages>464.0</bookpages>
             </book>
         </booklist>
