@@ -1,14 +1,16 @@
 package JAXB.SerializeAndDeserialize;
 
+import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.*;
+import java.util.Map;
 
 @XmlRootElement(name="bookstore")
 
-@XmlType(propOrder = {"bookNumber","name","author","publisher","ISBN","releaseDate","totalPages"})
+@XmlType(propOrder = {"bookNumber","name","author","publisher","ISBN","releaseDate","totalPages","testMap"})
 public class Book {
 
     private String name;
@@ -18,6 +20,7 @@ public class Book {
     private String publisher;
     private int bookNumber;
     private double totalPages;
+    private Map<String,String> testMap;
 
     @XmlElement(name="bookname",nillable = false)
     public String getName(){
@@ -82,6 +85,15 @@ public class Book {
     @XmlJavaTypeAdapter(DateTypeAdapter.class)
     public void setReleaseDate(LocalDate d){
         this.releaseDate = d;
+    }
+
+    @XmlElement(name="testmap")
+    public Map<String,String> getTestMap() {
+        return this.testMap;
+    }
+
+    public void setTestMap(Map<String, String> testMap) {
+        this.testMap = testMap;
     }
 
 }

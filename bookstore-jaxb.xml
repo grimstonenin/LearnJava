@@ -12,6 +12,16 @@
                 <isbn>978-0441172719</isbn>
                 <releaseDate>1965-08-01</releaseDate>
                 <bookpages>412.0</bookpages>
+                <testMap>
+                    <entry>
+                        <key>testkey2</key>
+                        <value>testValue2</value>
+                    </entry>
+                    <entry>
+                        <key>testKey</key>
+                        <value>testValue</value>
+                    </entry>
+                </testMap>
             </book>
             <book>
                 <booknumber>2</booknumber>

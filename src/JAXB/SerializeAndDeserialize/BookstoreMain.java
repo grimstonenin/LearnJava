@@ -9,8 +9,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-
-
+import java.util.HashMap;
+import java.util.Map;
 
 
 @XmlRootElement(name = "root")
@@ -30,6 +30,10 @@ class Stores{
 
       ArrayList<Book> bookList1 = new ArrayList<Book>();
 
+      Map<String,String> newMap = new HashMap<>();
+      newMap.put("testKey","testValue");
+      newMap.put("testkey2","testValue2");
+
       Book book11 = new Book();
 
       book11.setAuthor("Frank Herbert");
@@ -40,6 +44,7 @@ class Stores{
       book11.setReleaseDate(LocalDate.of(1965,8,1));
       book11.setTotalPages(412.0);
       bookList1.add(book11);
+      book11.setTestMap(newMap);
 
       Book book12 = new Book();
 
@@ -144,41 +149,41 @@ public class BookstoreMain {
 
         //unmarshall
 
-        File input = new File(BOOKSTORE_XML);
-
-        JAXBContext unmarshallContext = JAXBContext.newInstance(Stores.class);
-        Unmarshaller unmarshaller = unmarshallContext.createUnmarshaller();
-
-        Stores stores = (Stores)unmarshaller.unmarshal(input);
-
-        for(Bookstore b: stores.getStores()){
-            System.out.println(b.getName());
-            System.out.println(b.getLocation());
-            for(Book book: b.getBookList()){
-                System.out.println(book.getName());
-                System.out.println(book.getAuthor());
-                System.out.println(book.getReleaseDate());
-                System.out.println(book.getISBN());
-                System.out.println(book.getPublisher());
-                System.out.println(book.getTotalPages());
-                System.out.println(book.getBookNumber());
-            }
-        }
+//        File input = new File(BOOKSTORE_XML);
+//
+//        JAXBContext unmarshallContext = JAXBContext.newInstance(Stores.class);
+//        Unmarshaller unmarshaller = unmarshallContext.createUnmarshaller();
+//
+//        Stores stores = (Stores)unmarshaller.unmarshal(input);
+//
+//        for(Bookstore b: stores.getStores()){
+//            System.out.println(b.getName());
+//            System.out.println(b.getLocation());
+//            for(Book book: b.getBookList()){
+//                System.out.println(book.getName());
+//                System.out.println(book.getAuthor());
+//                System.out.println(book.getReleaseDate());
+//                System.out.println(book.getISBN());
+//                System.out.println(book.getPublisher());
+//                System.out.println(book.getTotalPages());
+//                System.out.println(book.getBookNumber());
+//            }
+//        }
 
 //create schema from xml
-        SchemaOutputResolver outputResolver = new SchemaOutputResolver() {
-            @Override
-            public Result createOutput(String namespaceUri, String suggestedFileName) throws IOException {
-                suggestedFileName = "bookstore.xsd";
-                File file = new File(suggestedFileName);
-                StreamResult result = new StreamResult(file);
-                result.setSystemId(file.toURI().toURL().toString());
-                return result;
-            }
-        };
-
-        context.generateSchema(outputResolver);
-
-
-    }
+//        SchemaOutputResolver outputResolver = new SchemaOutputResolver() {
+//            @Override
+//            public Result createOutput(String namespaceUri, String suggestedFileName) throws IOException {
+//                suggestedFileName = "bookstore.xsd";
+//                File file = new File(suggestedFileName);
+//                StreamResult result = new StreamResult(file);
+//                result.setSystemId(file.toURI().toURL().toString());
+//                return result;
+//            }
+//        };
+//
+//        context.generateSchema(outputResolver);
+//
+//
+   }
 }
