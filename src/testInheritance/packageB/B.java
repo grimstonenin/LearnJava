@@ -13,14 +13,25 @@ class B extends A{
 
     public static void main(String[] args) {
 
-        B obiectB = new B();
-
-        A obiectA = new A();
-
+        int a =1;
+        int b =2;
 
 
-        System.out.println(obiectA.param1);
 
+        switch(a){
+            default: a=10;
+            case 1:{
+                a=4;
 
+            }
+            case 2:{
+                a=5;
+                break;
+            }
+        }
+
+        System.out.println(a);
+
+        a=4;
     }
 }
