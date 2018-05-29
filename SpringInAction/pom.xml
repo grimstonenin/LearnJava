@@ -30,6 +30,11 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.0.1.BUILD-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
