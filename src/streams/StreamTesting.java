@@ -61,7 +61,7 @@ public class StreamTesting {
 //        List<String> myList =
 //                Arrays.asList("a1", "a2", "b1", "c2", "c1");
 //
-//        myList.stream()
+//         myList.stream()
 //              .filter(s -> s.startsWith("c"))
 //              .forEach(System.out::println);
 
@@ -69,8 +69,8 @@ public class StreamTesting {
 //                .stream()
 //                .map(String::toUpperCase)
 //                .forEach(System.out::println);
-
-
+//
+//
 //        IntStream.range(1,4)
 //                .forEach(System.out::println);
 //
@@ -117,21 +117,21 @@ public class StreamTesting {
 
         //flatmap example
 
-        List<Foo> foos = new ArrayList<>();
-
-        // create foos
-        IntStream.range(1, 4)
-                .forEach(i -> foos.add(new Foo("Foo" + i)));
-
-        // create bars
-        foos.forEach(f -> IntStream
-                        .range(1, 4)
-                        .forEach(i -> f.bars.add(new Bar("Bar" + i + " <- " + f.name))));
-
-        foos.stream()
-                .flatMap(f -> f.bars.stream())
-                .forEach(b -> System.out.println(b.name));
-
-       }
+//        List<Foo> foos = new ArrayList<>();
+//
+//        // create foos
+//        IntStream.range(1, 4)
+//                .forEach(i -> foos.add(new Foo("Foo" + i)));
+//
+//        // create bars
+//        foos.forEach(f -> IntStream
+//                        .range(1, 4)
+//                        .forEach(i -> f.bars.add(new Bar("Bar" + i + " <- " + f.name))));
+//
+//        foos.stream()
+//                .flatMap(f -> f.bars.stream())
+//                .forEach(b -> System.out.println(b.name));
+//
+      }
 
 }
